@@ -1,0 +1,23 @@
+default: &default
+    adapter: postgresql
+    encoding: unicode
+    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+    port: 5432
+    host: db
+    username: devuser
+    password: devuser
+
+development:
+    <<: *default
+    database: rails-6-trello_dev
+
+test:
+    <<: *default
+    database: rails-6-trello_test
+
+production:
+    <<: *default
+    database: rails-6-trello_production
+    username: <%= ENV["DATABASE_USERNAME"] %>
+    password: <%= ENV["DATABASE_PASSWORD"] %>
+    host: <%= ENV["DATABASE_HOST"] %>
