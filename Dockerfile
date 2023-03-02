@@ -4,8 +4,8 @@ RUN apt-get update -qq && apt-get install -y build-essential postgresql-client
 
 WORKDIR /rails-6-trello
 
-# install nodejs(LTS)
-RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y nodejs
+# install nodejs(15系)
+RUN curl -fsSL https://deb.nodesource.com/setup_15.x | bash - && apt-get install -y nodejs
 
 # npm自体のバージョンを最新にする
 RUN npm install -g npm
