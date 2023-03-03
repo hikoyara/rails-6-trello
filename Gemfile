@@ -12,6 +12,7 @@ gem 'jbuilder'
 gem 'bcrypt'
 gem 'bootsnap', require: false
 gem 'tzinfo-data'
+gem 'devise'
 
 group :development do
   gem 'web-console'
